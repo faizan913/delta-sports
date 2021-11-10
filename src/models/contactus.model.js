@@ -35,7 +35,7 @@ Contact.findById =  (lang,id, result)=> {
 
 
 Contact.findAll =  (result)=> {
-    const query = 'Select * from contacts'
+    const query = 'Select * from contact'
     dbConn.query(query,  (err, res)=> {
         if(err) {
             result(null, err)
