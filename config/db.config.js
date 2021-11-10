@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 
-const dbConn = mysql.createPool({
+const dbConn = mysql.createConnection({
   connectionLimit : 100, //important
   host     : 'us-cdbr-east-04.cleardb.com',
   user     : 'bb80ea1a4e273a',
@@ -8,6 +8,7 @@ const dbConn = mysql.createPool({
   database : 'heroku_a8ccc53a6508b80',
   debug    :  false
 });
+
 
 
 dbConn.connect((err) => {
